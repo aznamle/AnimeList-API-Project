@@ -10,11 +10,12 @@ function Container() {
 
     useEffect(() => {
         animeList()
+        animeWatching()
     }, [])
     
     const animeList = () => {
         axios
-            .get('https://api.jikan.moe/v3/user/aznamle/animelist/completed')
+            .get('https://api.jikan.moe/v3/user/aznamle/animelist/completed?order_by=score&sort=descending')
             .then(response => {
                 setAnime(response.data.anime)
             })
