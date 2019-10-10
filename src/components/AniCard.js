@@ -8,7 +8,7 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 
-function AniCard( {title, tag, img, url, classes} ) {
+function AniCard( {title, tag, img, score, url, classes} ) {
 
     return (
         <Card className={classes.item}>
@@ -20,6 +20,9 @@ function AniCard( {title, tag, img, url, classes} ) {
             <CardContent>
                 <Typography className={classes.text} variant="h6" component="p">
                     {title}
+                </Typography>
+                <Typography className={classes.text} variant="body2" component="p">
+                    Score: {score}
                 </Typography>
                 <Typography className={classes.text} variant="body2" color="textSecondary">
                     {tag}
