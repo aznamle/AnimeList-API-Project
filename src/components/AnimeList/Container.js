@@ -32,7 +32,7 @@ function Container() {
     return (
         <>
             <NavBar />
-            <List anime={anime} watching={watching} />
+            <List anime={anime} />
         </>
     )
 }
