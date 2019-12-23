@@ -1,12 +1,16 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
 
+import Grid from '@material-ui/core/Grid'
+import NavBar from './NavBar'
 import Container from './Container'
 
 function App() {
 
     return (
-        <Container />
+        <div>
+            <NavBar />
+            <Container />
+        </div>
     )
 }
 

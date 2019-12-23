@@ -6,33 +6,20 @@ import axios from 'axios'
 function Container() {
     
     const [ anime, setAnime ] = useState([])
-    const [ watching, setWatching ] = useState([])
 
     useEffect(() => {
         animeList()
-        animeWatching()
     }, [])
     
-    const animeList = () => {
-        axios
-            .get('https://api.jikan.moe/v3/user/aznamle/animelist/completed?order_by=score&sort=descending')
-            .then(response => {
-                setAnime(response.data.anime)
-            })
-    }
-
-    const animeWatching = () => {
-        axios
-            .get('https://api.jikan.moe/v3/user/aznamle/animelist/watching')
-            .then(response => {
-                setWatching(response.data.anime)
-            })
+    const animeList = async () => {
+        const response = await fetch(`https://api.jikan.moe/v3/user/aznamle/animelist/completed?order_by=score&sort=descending`)
+        const data = await response.json()
+        setAnime(data.anime)
     }
 
     return (
         <>
-            <NavBar />
-            <List anime={anime} watching={watching} />
+            <List anime={anime} />
         </>
     )
 }
