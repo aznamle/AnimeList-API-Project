@@ -8,9 +8,22 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 
-function WatchingCard( {} ) {
+function WatchingCard( {title, img, url, classes} ) {
 
-    return ()
+    return (
+        <Card className={classes.item}>
+            <CardActionArea href={url} target="_blank">
+                <CardMedia>
+                    <img src={img} />
+                </CardMedia>
+            </CardActionArea>
+            <CardContent>
+                <Typography className={classes.text} variant="h6">
+                    {title}
+                </Typography>
+            </CardContent>
+        </Card>
+    )
 }
 
 export default withStyles({
