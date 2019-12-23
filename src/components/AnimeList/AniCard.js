@@ -30,9 +30,9 @@ function AniCard( {title, tag, img, score, url, episodes, classes} ) {
                     </LazyLoad>
                 </CardActionArea>
             </div>
-            <div className={classes.detail}>
+            <div className={classes.details}>
                 <CardContent>
-                    <Typography className={classes.text} variant="body1" color="textPrimary">
+                    <Typography className={classes.text} variant="body1" color="textSecondary">
                         {tag}
                     </Typography>
                 </CardContent>
@@ -60,6 +60,7 @@ export default withStyles({
         width: "200px",
     },
     details: {
+        background: '#FAFCFC',
         display: 'flex',
         flexDirection: 'row',
     }

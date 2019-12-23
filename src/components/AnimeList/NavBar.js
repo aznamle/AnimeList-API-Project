@@ -5,10 +5,10 @@ import { AppBar, Toolbar, Typography } from '@material-ui/core'
 
 function NavBar( {classes} ) {
     return (
-        <AppBar className={classes.NavColor} color="primary" position="static">
+        <AppBar className={classes.NavColor} color="primary" position="absolute">
             <Toolbar variant="regular">
-                <Typography align="center" variant="h5" component="p">
-                    Anime List
+                <Typography align="center" variant="h6" component="p">
+                    Aznamle's Anime List
                 </Typography>
             </Toolbar>
         </AppBar>

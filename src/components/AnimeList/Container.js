@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import List from './List'
-import NavBar from './NavBar'
-import axios from 'axios'
 
 function Container() {
     

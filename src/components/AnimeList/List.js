@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import AniCard from './AniCard'
 
-import { Grid, Typography, GridList } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 
 function List( {anime} ) {
     

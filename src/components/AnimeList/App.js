@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 
 import Grid from '@material-ui/core/Grid'
 import NavBar from './NavBar'
@@ -8,7 +9,6 @@ function App() {
 
     return (
         <div>
-            <NavBar />
             <Container />
         </div>
     )
