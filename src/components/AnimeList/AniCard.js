@@ -46,7 +46,7 @@ export default withStyles({
     card: {
         display: 'flex',
         margin: '2em',
-        minWidth: '100px',
+        minWidth: '50px',
         justifyContent: 'space-around',
     },
     item: {
@@ -61,6 +61,6 @@ export default withStyles({
     },
     details: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
     }
 })(AniCard) 
