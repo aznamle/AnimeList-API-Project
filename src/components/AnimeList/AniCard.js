@@ -8,9 +8,11 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import LazyLoad from 'react-lazyload'
+import Skeleton from '@material-ui/lab/Skeleton';
 
 
-function AniCard( {title, tag, img, score, url, classes} ) {
+
+function AniCard( {title, tag, img, score, url, episodes, classes} ) {
 
     return (
         <Card className={classes.card}>
@@ -21,6 +23,7 @@ function AniCard( {title, tag, img, score, url, classes} ) {
                             <img src={img} />
                             <GridListTileBar
                                 title={title}
+                                variant='1'
                                 subtitle={<span>Score: {score}</span>}
                             />
                         </CardMedia>
@@ -43,21 +46,21 @@ export default withStyles({
     card: {
         display: 'flex',
         margin: '2em',
-        minWidth: "250px"
+        minWidth: '100px',
+        justifyContent: 'space-around',
     },
     item: {
-        textAlign: "center",
+        alignContent: 'center',
         boxSizing: "border-box"
     },
     media: {
         height: "307px",
     },
     text: {
-        width: "300px",
-        textAlign: "center",
+        width: "200px",
     },
     details: {
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
     }
 })(AniCard) 
