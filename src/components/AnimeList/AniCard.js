@@ -45,7 +45,7 @@ function AniCard( {title, tag, img, score, url, episodes, classes} ) {
 export default withStyles({
     card: {
         display: 'flex',
-        margin: '2em',
+        margin: '1em',
         minWidth: '50px',
         justifyContent: 'space-around',
     },
