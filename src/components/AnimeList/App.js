@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import './App.css'
 
 import Grid from '@material-ui/core/Grid'
@@ -8,10 +8,10 @@ import Container from './Container'
 function App() {
 
     return (
-        <div>
+        <>
             <NavBar />
-            <Container />
-        </div>
+            <div><Container /></div>
+        </>
     )
 }
 

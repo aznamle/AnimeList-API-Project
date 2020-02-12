@@ -15,6 +15,7 @@ import Skeleton from '@material-ui/lab/Skeleton';
 function AniCard( {title, tag, img, score, url, episodes, classes} ) {
 
     return (
+        <div>
         <Card className={classes.card}>
             <div className={classes.item}>
                 <CardActionArea href={url} target="_blank">
@@ -38,6 +39,7 @@ function AniCard( {title, tag, img, score, url, episodes, classes} ) {
                 </CardContent>
             </div>
         </Card>
+        </div>
     )
 }
 
